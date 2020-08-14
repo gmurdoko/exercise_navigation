@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.exercise_navigation.R
+import com.example.exercise_navigation.view_model.UserViewModel
 import kotlinx.android.synthetic.main.fragment_input_amount.*
 import kotlinx.android.synthetic.main.fragment_input_recipient.*
 
@@ -16,6 +18,7 @@ import kotlinx.android.synthetic.main.fragment_input_recipient.*
 
 class InputRecipientFragment : Fragment(),View.OnClickListener {
     lateinit var navController: NavController
+    val userViewModel : UserViewModel by activityViewModels<UserViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +41,12 @@ class InputRecipientFragment : Fragment(),View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             button_next_recipient ->{
-                val bundle = bundleOf("username" to recipient_name_text.text.toString())
-                navController.navigate(R.id.action_inputRecipientFragment_to_inputAmountFragment,bundle)
+
+                val username = recipient_name_text.text.toString()
+                val accountNumber = recipient_account_text.text.toString()
+                val bankname = bankname_list.selectedItem.toString()
+                userViewModel.toInputAmount(bankname,accountNumber,username)
+                navController.navigate(R.id.action_inputRecipientFragment_to_inputAmountFragment)
             }
         }
     }

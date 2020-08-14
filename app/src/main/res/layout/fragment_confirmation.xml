@@ -30,20 +30,34 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_baseline_check_circle_24" />
-<!--            <TextView-->
-<!--                android:id="@+id/text_confirmation_receiver"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Juan"-->
-<!--                android:textSize="20dp"-->
-<!--                />-->
-<!--            <TextView-->
-<!--                android:id="@+id/text_confirmation_amount"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="2000"-->
-<!--                android:textSize="20dp"-->
-<!--                />-->
+            <TextView
+                android:id="@+id/text_username_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Juan"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/text_account_number_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Juan"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/text_amount_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2000"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:id="@+id/text_bank_name_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2000"
+                android:textSize="20dp"
+                />
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
